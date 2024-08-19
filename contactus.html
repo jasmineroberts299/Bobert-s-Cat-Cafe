@@ -1,0 +1,122 @@
+<!doctype html>
+
+<html lang="en-US">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Bobert's Cat Cafe - Contact Us</title>
+
+<link rel="stylesheet" type="text/css" href="styles.css"> 
+<style>
+
+form {
+	border-radius: 25px;
+	padding: 20px 25px 20px 25px;
+	color: #4d004d;
+	font-family: Lucida Handwriting;
+	background-color: #ffcccc;
+}
+input[type=submit] {
+	padding: 10px 20px 10px 20px;
+	background-color: #ff99cc;
+}
+input[type=number] {
+	background-color: #ffe6ff;
+}
+
+</style>                    
+
+
+</head>
+
+<body>
+
+<header>
+<img src="images/logo.jpg" alt="Boberts cat cafe text" width="200" height="200">
+<h1>Contact us at Bobert's Cat Cafe!</h1>
+</header>
+<nav>
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="aboutuspage.html">About Us</a></li>
+		<li><a href="menu.html">Menu</a></li>
+		<li><a href="history.html">History</a></li>
+		<li><a href="contactus.html">Contact Us</a></li>
+		<li><a href="chef.html">Meet the Chef</a></li>
+		<li><a href="cats.html">Cats</a></li>
+	</ul>
+</nav>
+<main>
+
+<h2>Let us know what you think!</h2>
+<form action="" method="post" autocomplete="on">
+	<label for="fname">First Name:</label>
+	<input type="text" name="fname" required><br><br>
+	<label for="lname">Last Name:</label>
+	<input type="text" name="lname" required><br><br>
+	<label for="email">Email:</label>
+	<input type="email" name="email" autocomplete="off" required><br><br>
+	<label for="phone">Telephone Number:</label>
+	<input type="tel" name="phone" required><br><br>
+
+<p>What's your favorite item from our menu?</p>
+	<input type="radio" id="coffee" name="fav_item" value="Coffee">
+	<label for="coffee">Coffee</label><br>
+	<input type="radio" id="bagel" name="fav_item" value="Bagel">
+	<label for="bagel">Bagel</label><br>
+	<input type="radio" id="muffin" name="fav_item" value="Muffin">
+	<label for="muffin">Muffin</label><br>
+
+<p>What times of day do you like to visit Bobert's Cat Cafe?</p>
+	<input type="checkbox" id="morning" name="morning" value="Morning">
+	<label for="morning"> I love the morning!</label><br>
+	<input type="checkbox" id="noon" name="noon" value="Noon">
+	<label for="noon"> I love noon!</label><br>
+	<input type="checkbox" id="evening" name="evening" value="Evening">
+	<label for="evening"> I love the evening!</label><br>
+<p>Do you have the membership to Bobert's Cat Cafe?</p>
+	<input list="answer" name="answer">
+	<datalist id="answer">
+	<option value="Yes">
+	<option value="No">
+	</datalist>
+
+<h3>Enter your four-digit passcode, then click OK:</h3>
+<input id="id1" type="number" min="1000" max="9999">
+<button onclick="myFunction()">OK</button>
+<p id="passcode"></p>
+<script>
+function myFunction() {
+	var inpObj = document.getElementById("id1");
+	if (inpObj.checkValidity() == false) {
+		document.getElementById("passcode").innerHTML =
+		inpObj.validationMessage;
+	}  else {
+		document.getElementById("passcode").innerHTML = "Passcode Valid";
+	}
+}
+</script>
+
+<h3 style="font-family: Lucida Handwriting;">Comments</h3>
+	<textarea name="comments" rows="5" cols="10"></textarea><br><br>
+	<input type="submit" value="Submit Form"> <br><br>
+	<input type="reset">
+</form>
+
+</main>
+<footer>
+<p>
+<small>
+<a href="index.html">Home</a> | <a href="aboutuspage.html">About Us</a> | 
+<a href="menu.html">Menu</a> | <a href="history.html">History</a> | 
+<a href="contactus.hmtl">Contact Us</a> | <a href="chef.html">Meet the Chef</a> | 
+<a href="cats.html">Cats</a>
+</small>
+</p>
+</footer>
+
+</body>
+
+</html>
